@@ -66,7 +66,7 @@ namespace Mission.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-           
+            ViewData["CategorieId"] = new SelectList(_context.Categories.OrderBy(c => c.Titre), "Id", "Titre");
             return View(produit);
         }
 
