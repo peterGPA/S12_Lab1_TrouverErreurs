@@ -12,26 +12,26 @@
     <div class="col-md-4">
         <form asp-action="Edit">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <input type="hidden" asp-for="Id" />
+            <input type="hidden" asp-for="Produit.Id" />
             <div class="form-group">
-                <label asp-for="Description" class="control-label"></label>
-                <input asp-for="Description" class="form-control" />
-                <span asp-validation-for="Description" class="text-danger"></span>
+                <label asp-for="Produit.Description" class="control-label"></label>
+                <input asp-for="Produit.Description" class="form-control" />
+                <span asp-validation-for="Produit.Description" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="DateCreation" class="control-label"></label>
-                <input asp-for="DateCreation" class="form-control" />
-                <span asp-validation-for="DateCreation" class="text-danger"></span>
+                <label asp-for="Produit.DateCreation" class="control-label"></label>
+                <input asp-for="Produit.DateCreation" class="form-control" />
+                <span asp-validation-for="Produit.DateCreation" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="PrixVente" class="control-label"></label>
-                <input asp-for="PrixVente" class="form-control" />
-                <span asp-validation-for="PrixVente" class="text-danger"></span>
+                <label asp-for="Produit.PrixVente" class="control-label"></label>
+                <input asp-for="Produit.PrixVente" class="form-control" />
+                <span asp-validation-for="Produit.PrixVente" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="CategorieId" class="control-label"></label>
-                <select asp-for="CategorieId" class="form-control" asp-items="ViewBag.CategorieId"></select>
-                <span asp-validation-for="CategorieId" class="text-danger"></span>
+                <label asp-for="Produit.CategorieId" class="control-label"></label>
+                <select asp-for="Produit.CategorieId" class="form-control" asp-items="ViewBag.CategorieId"></select>
+                <span asp-validation-for="Produit.CategorieId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-primary" />

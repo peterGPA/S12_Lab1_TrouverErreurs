@@ -55,6 +55,7 @@ namespace Mission.Controllers
                 Text = i.Titre,
                 Value = i.Id.ToString()
             });
+            ViewData["CategorieId"] = new SelectList(_context.Categories.OrderBy(c => c.Titre), "Id", "Titre");
             return View(produit_VM);
         }
 
@@ -71,7 +72,8 @@ namespace Mission.Controllers
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
             }
-         
+            ViewData["CategorieId"] = new SelectList(_context.Categories.OrderBy(c => c.Titre), "Id", "Titre");
+
             return View(produit_VM);
         }
 
