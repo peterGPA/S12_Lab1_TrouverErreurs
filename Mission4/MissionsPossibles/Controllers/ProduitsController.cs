@@ -49,7 +49,7 @@ namespace Mission.Controllers
         // GET: Produits/Create
         public IActionResult Create()
         {
-         
+            ViewData["CategorieId"] = new SelectList(_context.Categories.OrderBy(c => c.Titre), "Id", "Titre");
             return View();
         }
 
